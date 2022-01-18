@@ -1,0 +1,43 @@
+1. What does an empty dictionary's code look like?
+To create an empty dictionary, the dictionary should be set to {}. This is shown in the code below. So, with this code above, we create a dictionary called items which is set equal to {}. So this dictionary named items is empty.
+
+2. What is the value of a dictionary value with the key 'foo' and the value 42?
+dict = { "foo" : 42 }
+Here Key =  foo and value = 42
+
+3. What is the most significant distinction between a dictionary and a list?
+A list is an ordered sequence of objects, whereas dictionaries are unordered sets. However, the main difference is that items in dictionaries are accessed via keys and not via their position.Any key of the dictionary is associated (or mapped) to a value. The values of a dictionary can be any type of Python data. So, dictionaries are unordered key-value-pairs. Dictionaries are implemented as hash tables, and that is the reason why they are known as "Hashes" in the programming language Perl.
+
+4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+spam = {'bar' : 100} --> value and key assigned to spam 
+spam['foo'] --> It will throw an error as we had created as dictionary and trying to access the list element.
+To access the list element we have to create new list with foo value.
+
+5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.keys()?
+spam = { 'cat' : 122 } --> assigning key cat and some random value as dictionary to spam
+spam.keys() --> if we use this keyword, python will display the all key elements that are present in spam.
+dict_keys(['cat']) 
+
+6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.values()?
+spam = { 'cat' : 122 } --> assigning key cat and some random value as dictionary to spam
+spam.values() --> if we use this keyword, python will display the all value elements that are present in spam.
+dict_values([122])
+
+7. What is a shortcut for the following code?
+if 'color' not in spam:
+spam['color'] = 'black'
+
+'color' in spam --> True / False 
+spam['color'] = 'black'
+By using the boolean we can find that wether the color is available in spam or not. If not available then the next code will execute and store the new dictionary value in the dictionary.
+
+8. How do you "pretty print" dictionary values using which module and function?
+By using the pprint() to Pretty Print a Dictionary in Python. This module also supports pretty-printing dictionary. Within the pprint module there is a function with the same name pprint() , which is the function used to pretty-print the given string or object.
+import pprint
+
+dct_arr = [
+  {'Name': 'AAA', 'Age': '23', 'Country': 'XXX'},
+  {'Name': 'BBB', 'Age': '44', 'Country': 'YYY'},
+  {'Name': 'CCC', 'Age': '29', 'Country': 'ZZZ'}
+]
+pprint.pprint(dct_arr)
