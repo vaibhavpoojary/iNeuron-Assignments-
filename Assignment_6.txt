@@ -1,0 +1,39 @@
+1. What are escape characters, and how do you use them?
+In Python strings, the backslash "\" is a special character, also called the "escape" character. It is used in representing certain whitespace characters: "\t" is a tab, "\n" is a newline, and "\r" is a carriage return.
+
+2. What do the escape characters n and t stand for?
+"\t" is a tab
+"\n" is a newline
+
+3. What is the way to include backslash characters in a string?
+Use the syntax "\\" within the string literal to represent a single backslash.
+
+text = "\\"
+print(text)
+
+4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the word Howl's not escaped a problem?
+"Howl's Moving Castle" --> Initially python will take the " " as a whole string so in the word Howl's the single quote won't affect the string value.
+
+5. How do you write a string of newlines if you don't want to use the n character?
+Multiline strings allow you to use newlines in strings without the \n escape character.
+
+6. What are the values of the given expressions?
+'Hello, world!'[1] --> 'e'
+'Hello, world!'[0:5] --> 'Hello'
+'Hello, world!'[:5] --> 'Hello'
+'Hello, world!'[3:] --> 'lo world!
+ 
+7. What are the values of the following expressions?
+'Hello'.upper() --> 'HELLO' 
+'Hello'.upper().isupper() --> True (Boolean Operator)
+'Hello'.upper().lower() --> 'hello'
+
+8. What are the values of the following expressions?
+'Remember, remember, the fifth of July.'.split() --> ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+'-'.join('There can only one.'.split()) --> 'There-can-be-only-one.'
+
+9. What are the methods for right-justifying, left-justifying, and centering a string?
+The rjust(), ljust(), and center() string methods, respectively
+
+10. What is the best way to remove whitespace characters from the start or end?
+The lstrip() and rstrip() methods remove whitespace from the left and right ends of a string, respectively.
