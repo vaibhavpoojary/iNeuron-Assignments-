@@ -1,0 +1,58 @@
+1. Is the Python Standard Library included with PyInputPlus?
+Ans:-
+    PyInputPlus is a Python module used for taking inputs with additional validation features. PyInputPlus will keep asking the user for text until they enter valid input.
+
+
+2. Why is PyInputPlus commonly imported with import pyinputplus as pypi?
+Ans:-
+    You can import the module with import pyinputplus as pyip so that you can enter a shorter name when calling the module’s functions.
+    PyInputPlus has functions for entering a variety of input, including strings, numbers, dates, yes/no, True/False, emails, and files.
+
+
+3. How do you distinguish between inputInt() and inputFloat()?
+Ans:-
+    inputInt() : Accepts an integer value. This also takes additional parameters ‘min’, ‘max’, ‘greaterThan’ and ‘lessThan’  for bounds. Returns     an int.
+    
+    inputFloat() : Accepts a floating-point numeric value. Also takes additional ‘min’, ‘max’, ‘greaterThan’ and ‘lessThan’  parameters. Returns     a float.
+
+
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+Ans:-
+    pip install pyinputplus
+    import pyinputplus as pyip
+    response = pyip.inputInt('Enter num: ', min=0,max=99)
+    
+        Enter num: 100
+        Number must be at maximum 99.
+        Enter num: -9
+        Number must be at minimum 0.
+        Enter num: 89.7
+        '89.7' is not an integer.
+        Enter num: gh
+        'gh' is not an integer.
+        Enter num: 95
+
+
+5. What is transferred to the keyword arguments allowRegexes and blockRegexes?
+Ans:-
+     The allowRegexes and blockRegexes keyword arguments take a list of regular expression strings to determine what the PyInputPlus function will accept or reject as valid input.
+
+
+6. If a blank input is entered three times, what does inputStr(limit=3) do?
+Ans:-
+    inputStr() raises a TimeoutException exception. If the user answers incorrectly more than 3 times, it raises a RetryLimitException exception.
+
+
+7. If blank input is entered three times, what does inputStr(limit=3, default='hello') do?
+Ans:-
+    import pyinputplus as pyip
+    response = pyip.inputNum(limit=3, default='hello')
+    
+        hello
+        'hello' is not a number.
+        world
+        'world' is not a number.
+        45
+        
+        
+
